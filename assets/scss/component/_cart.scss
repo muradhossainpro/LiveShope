@@ -248,6 +248,9 @@
       padding: 5px 8px;
       border-radius: var(--border-radius);
       height: 35px;
+      @media #{$xs}{
+        height: 30px;
+      }
     }
   }
 }

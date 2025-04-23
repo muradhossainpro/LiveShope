@@ -4159,6 +4159,11 @@ img {
   border-radius: var(--border-radius);
   height: 35px;
 }
+@media (max-width: 575px) {
+  .cart-add-input {
+    height: 30px;
+  }
+}
 
 .simple-btn {
   transition: 0.3s;
