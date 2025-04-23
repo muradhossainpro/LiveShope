@@ -10,7 +10,7 @@
 
   const buttons = document.querySelectorAll("button");
   const minValue = 0;
-  const maxValue = 0;
+  const maxValue = 100;
   
   buttons.forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -47,6 +47,7 @@
       }
     });
   });
+  
   
 
   // preloader
