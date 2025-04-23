@@ -4150,6 +4150,15 @@ img {
   display: flex;
   flex-direction: column;
 }
+.cart-add-input {
+  width: 35px;
+  text-align: center;
+  border: 1px solid var(--theme-clr);
+  margin: 0 5px;
+  padding: 5px 8px;
+  border-radius: var(--border-radius);
+  height: 35px;
+}
 
 .simple-btn {
   transition: 0.3s;
@@ -4289,8 +4298,6 @@ img {
   border: 1px solid var(--border-clr);
   height: 35px;
   width: 35px;
-  cursor: pointer;
-  transition: 0.3s;
   border-radius: 4px;
 }
 .quantity-btn:hover {
@@ -4342,14 +4349,6 @@ img {
   align-items: center;
   margin-bottom: 5px;
   gap: 5px;
-}
-.menu-crad-add input {
-  display: inline-block;
-  border: 1px solid var(--border-clr);
-  height: 35px;
-  width: 35px;
-  text-align: center;
-  border-radius: 4px;
 }
 
 /*----------------------------------------*/

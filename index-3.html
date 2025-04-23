@@ -39,7 +39,7 @@
             </div>
             <div class="cart-container">
                 <div class="cart-item-wrap">
-                    <div class="cart-info-wrap d-flex align-items-center justify-content-between">
+                    <div class="cart-info-wrap d-flex justify-content-between">
                         <div class="cart-item-thumb">
                             <img src="assets/img/deal/popular1.jpg" alt="Product Name">
                         </div>
@@ -55,9 +55,9 @@
                         <div class="cart-item-details">
                             <div class="cart-item-actions d-flex justify-content-between">
                                 <div class="menu-crad-add">
-                                    <button class="quantity-btn decrement-btn">-</button>
-                                    <input type="text" class="add-input" value="1">
-                                    <button class="quantity-btn increment-btn">+</button>
+                                    <button class="quantity-btn minus" aria-label="Decrease by one" disabled>-</button>
+                                    <div class="number dim cart-add-input">0</div>
+                                    <button class="quantity-btn plus" aria-label="Increase by one">+</button>
                                 </div>
                                 <div class="cart-button">
                                     <button class="cart-delete-btn"><i class="far fa-trash-alt"></i></button>
@@ -81,9 +81,9 @@
                         <div class="cart-item-details">
                             <div class="cart-item-actions d-flex justify-content-between">
                                 <div class="menu-crad-add">
-                                    <button class="quantity-btn decrement-btn">-</button>
-                                    <input type="text" class="tp-add-input" value="1">
-                                    <button class="quantity-btn increment-btn">+</button>
+                                    <button class="quantity-btn minus" aria-label="Decrease by one" disabled>-</button>
+                                    <div class="number dim cart-add-input">0</div>
+                                    <button class="quantity-btn plus" aria-label="Increase by one">+</button>
                                 </div>
                                 <div class="cart-button">
                                     <button class="cart-delete-btn"><i class="far fa-trash-alt"></i></button>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cart-info-wrap d-flex align-items-center justify-content-between">
+                    <div class="cart-info-wrap d-flex justify-content-between">
                         <div class="cart-item-thumb">
                             <img src="assets/img/deal/popular3.jpg" alt="Product Name">
                         </div>
@@ -107,9 +107,9 @@
                         <div class="cart-item-details">
                             <div class="cart-item-actions d-flex justify-content-between">
                                 <div class="menu-crad-add">
-                                    <button class="quantity-btn decrement-btn">-</button>
-                                    <input type="text" class="tp-add-input" value="1">
-                                    <button class="quantity-btn increment-btn">+</button>
+                                    <button class="quantity-btn minus" aria-label="Decrease by one" disabled>-</button>
+                                    <div class="number dim cart-add-input">0</div>
+                                    <button class="quantity-btn plus" aria-label="Increase by one">+</button>
                                 </div>
                                 <div class="cart-button">
                                     <button class="cart-delete-btn"><i class="far fa-trash-alt"></i></button>
@@ -133,9 +133,9 @@
                         <div class="cart-item-details">
                             <div class="cart-item-actions d-flex justify-content-between">
                                 <div class="menu-crad-add">
-                                    <button class="quantity-btn decrement-btn">-</button>
-                                    <input type="text" class="tp-add-input" value="1">
-                                    <button class="quantity-btn increment-btn">+</button>
+                                    <button class="quantity-btn minus" aria-label="Decrease by one" disabled>-</button>
+                                    <div class="number dim cart-add-input">0</div>
+                                    <button class="quantity-btn plus" aria-label="Increase by one">+</button>
                                 </div>
                                 <div class="cart-button">
                                     <button class="cart-delete-btn"><i class="far fa-trash-alt"></i></button>
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cart-info-wrap d-flex align-items-center justify-content-between">
+                    <div class="cart-info-wrap d-flex justify-content-between">
                         <div class="cart-item-thumb">
                             <img src="assets/img/deal/popular1.jpg" alt="Product Name">
                         </div>
@@ -159,9 +159,9 @@
                         <div class="cart-item-details">
                             <div class="cart-item-actions d-flex justify-content-between">
                                 <div class="menu-crad-add">
-                                    <button class="quantity-btn decrement-btn">-</button>
-                                    <input type="text" class="tp-add-input" value="1">
-                                    <button class="quantity-btn increment-btn">+</button>
+                                    <button class="quantity-btn minus" aria-label="Decrease by one" disabled>-</button>
+                                    <div class="number dim cart-add-input">0</div>
+                                    <button class="quantity-btn plus" aria-label="Increase by one">+</button>
                                 </div>
                                 <div class="cart-button">
                                     <button class="cart-delete-btn"><i class="far fa-trash-alt"></i></button>
@@ -170,10 +170,10 @@
                         </div>
                     </div>
                 </div>
-
+        
                 <!-- Divider -->
                 <hr class="cart-divider">
-
+        
                 <!-- Total and Checkout -->
                 <div class="cart-total">
                     <span class="cart-total-text">Total Cart Price:</span>
@@ -183,8 +183,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
+        </div>
     <div class="cart-overlay"></div>
     <!--tp-cart-toggle-close-->
 
