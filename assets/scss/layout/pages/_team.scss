@@ -1,0 +1,101 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.7 Faq
+/*----------------------------------------*/
+
+.team {
+  &-image {
+    & img {
+      width: 100%;
+      border-radius: var(--border-radius);
+    }
+  }
+
+  &-content {
+    & span {
+      position: relative;
+      margin-left: 10px;
+
+      & i {
+        height: 1px;
+        width: 40px;
+        background: var(--theme-clr);
+        display: inline-block;
+        transform: translateY(-5px);
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &-title {
+    &:hover {
+      color: var(--theme-clr);
+    }
+  }
+
+  &-social {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: visible;
+    transition: .3s;
+
+    & a {
+      height: clamp(1.875rem, 1.42rem + 2.27vw, 3.125rem);
+      width: clamp(1.875rem, 1.42rem + 2.27vw, 3.125rem);
+      color: var(--white-clr);
+      background: var(--theme-clr);
+      display: inline-block;
+      border-radius: 50%;
+      line-height: clamp(1.875rem, 1.42rem + 2.27vw, 3.125rem);
+      margin: 0 2px;
+      text-align: center;
+      &:hover{
+        background-color: var(--theme-clr-2);
+        color: var(--theme-clr);
+      } 
+    }
+  }
+
+  &:hover {
+    & .team-social {
+      opacity: 1;
+      visibility: visible;
+      top: 40%;
+    }
+  }
+}
+
+.pricing{
+  border: 1px solid var(--theme-clr);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  &-icon{
+    display: inline-block;
+    font-size: 50px;
+    color: var(--theme-clr);
+  }
+  &-features{
+    & li{
+      list-style: none;
+      margin-bottom: 10px;
+      & i{
+        margin-right: 5px;
+      }
+    }
+  }
+  &-content{
+      border-bottom: 1px solid var(--theme-clr);
+      margin-bottom: 20px;
+    & span{
+      font-size: 60px;
+      color: var(--theme-clr);
+    }
+  }
+  &-title{
+    margin-bottom: 0;
+  }
+}

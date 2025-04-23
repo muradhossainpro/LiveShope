@@ -1,0 +1,75 @@
+@use "sass:selector";
+
+// tp-root
+@mixin tp-root($child) {
+    @at-root #{selector.unify(&, $child)} {
+      @content;
+    }
+}
+
+// placeholder input
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+// transition
+@mixin transition($args) { 
+    -webkit-transition: $args; 
+    -moz-transition: $args; 
+    -ms-transition: $args; 
+    -o-transition: $args; 
+    transition: $args; 
+  }
+
+// transform
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// Flexbox display
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+} 
+
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: var(--border-radius);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--theme-clr); 
+  border-radius: var(--border-radius);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-clr); 
+}

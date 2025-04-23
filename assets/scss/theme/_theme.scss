@@ -1,0 +1,286 @@
+@use '../utils' as *;
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Live Shope - One line shopping HTML Template
+    Author: 
+    Support: help..net
+    Description: Live Shope - One line shopping HTML Template is a modern, customizable, and responsive template designed for agencies to showcase their work, services, and team with stylish layouts and interactive features.
+    Version: 1.0.0
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+	-----------------
+    01. THEME CSS
+	-----------------
+		1.1 Theme Default
+		1.2 Common Classes
+		1.3 Default Spacing
+		
+	-----------------
+    02. COMPONENTS css
+	-----------------
+		2.1 Accordion
+		2.2 Back to Top
+		2.3 Breadcrumb
+		2.4 Button
+		2.5 Custom Animation
+		2.6 Offcanvas
+		2.7 Preloader
+		2.8 Search Bar
+		2.9 Skill
+
+	-----------------
+    03. HEADER CSS
+	-----------------
+		3.1 Header Style 1
+		3.2 Mobile Menu
+
+	---------------------------------
+	04. BLOG CSS
+	---------------------------------
+		4.1 Postbox
+		4.2 Recent Post
+		4.3 Sidebar
+
+	---------------------------------
+	06. FOOTER CSS
+	---------------------------------
+		5.1 Footer Style 1
+		5.2 Footer Style 2
+		5.3 Footer Style 3
+	
+	---------------------------------
+	07. PAGES CSS
+	---------------------------------
+		6.1 About
+		6.2 Award
+		6.3 Brand
+		6.4 Contact
+		6.5 CTA
+		6.6 Fact
+		6.7 Faq
+		6.8 Hero
+		6.9 Newsletter
+		6.10 Portfolio
+		6.11 Pricing
+		6.12 Process
+		6.13 Services
+		6.14 Team
+		6.15 Testimonial
+		6.16 Video
+
+
+**********************************************/
+
+
+/*----------------------------------------*/
+/*  1.1 Theme Default
+/*----------------------------------------*/
+
+@import url($font-url);
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*---------------------------------
+	typography css start 
+---------------------------------*/
+body {
+	font-family: var(--font-body);
+	font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.063rem);
+	font-weight: normal;
+	color: var(--black-clr);
+	line-height: 1.3;
+}
+
+a{
+	text-decoration: none;
+	font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.063rem);
+}
+span{
+	font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.063rem);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-heading);
+	color: var(--black-clr);
+	margin-top: 0px;
+	font-weight: 600;
+	line-height: 1.2;
+	text-transform: capitalize;
+}
+
+h1 {
+	font-size: clamp(1.875rem, 1.275rem + 3vw, 3.75rem);
+}
+  
+h2 {
+font-size: clamp(1.25rem, 0.85rem + 2vw, 2.5rem);
+}
+
+h3 {
+font-size: clamp(1.125rem, 0.885rem + 1.2vw, 1.875rem);
+}
+
+h4 {
+font-size: clamp(0.938rem, 0.758rem + 0.9vw, 1.5rem);
+}
+
+h5 {
+font-size: clamp(0.813rem, 0.712rem + 0.5vw, 1.125rem);
+}
+
+h6 {
+font-size: clamp(0.75rem, 0.67rem + 0.4vw, 1rem);
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+p {
+	font-family: var(--font-body);
+	font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.063rem);
+	font-weight: 400;
+	color: var(--black-clr);
+	margin-bottom: 15px;
+	line-height: 1.4;
+}
+
+
+a,
+button,
+p,
+input,
+select,
+textarea,
+li,
+.transition-3{
+	@include transition(.3s);
+}
+
+a:not([href]):not([class]), 
+a:not([href]):not([class]):hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover{
+	color: inherit;
+	text-decoration: none;
+}
+
+
+
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+button:focus{
+    outline: 0; 
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+textarea{
+	outline: none;
+	background-color: transparent;
+	height: 56px;
+	width: 100%;
+	line-height: 56px;
+	font-size: 15px;
+	color: var(--black-clr);
+	border: 0;
+	border-bottom: 1px solid #57595C;
+	text-transform: capitalize;
+	font-weight: 500;
+
+	@include placeholder{
+		color: var(--theme-clr);
+	}
+
+	&:focus{
+		border-color: var(--white-clr);
+		&::placeholder{
+			opacity: 0;
+			text-transform: capitalize;
+		}
+	}
+
+}
+
+textarea{
+	line-height: 1.4;
+	padding-top: 17px;
+	padding-bottom: 17px;
+}
+
+*::-moz-selection {
+	background: var(--theme-clr);
+	color: #fff;
+	text-shadow: none;
+}
+*::selection {
+	background: var(--theme-clr);
+	color: #fff;
+	text-shadow: none;
+}
+
+*::-moz-placeholder {
+	color: var(--black-clr);
+	font-size: 15px;
+	opacity: 1;
+	font-weight: 500;
+}
+*::placeholder {
+	color: var(--black-clr);
+	font-size: 15px;
+	opacity: 1;
+	font-weight: 500;
+}
+
+////im
+img:not([draggable]),
+embed,
+object,
+video {
+  max-width: 100%;
+  height: auto;
+}

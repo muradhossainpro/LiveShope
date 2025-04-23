@@ -1,0 +1,32 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.1 Postbox
+/*----------------------------------------*/
+
+.blog{
+    &-single{
+        &-quote{
+            & blockquote{
+                border: 1px solid var(--border-clr);
+                text-align: center;
+                border-radius: var(--border-radius);
+                padding: 60px;
+                & i{
+                    font-size: 50px;
+                    margin-bottom: 30px;
+                }
+                & p{
+                    font-size: 28px;
+                    color: var(--black-clr);
+                    margin-bottom: 30px;
+                }
+                & cite{
+                    color: var(--black-clr);
+                    font-size: 20px;
+                    font-style: normal;
+                }
+            }
+        }     
+    }
+}

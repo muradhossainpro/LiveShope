@@ -1,0 +1,28 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.2 Back to Top
+/*----------------------------------------*/
+
+#back-to-top{
+	position: fixed;
+	right: 15px;
+	bottom: 80px;
+	background: var(--theme-clr);
+	color: var(--white-clr);
+	z-index: 9999999;
+	width: clamp(2.188rem, 1.887rem + 1.5vw, 3.125rem);
+	height: clamp(2.188rem, 1.887rem + 1.5vw, 3.125rem);
+	text-align: center;
+	line-height: clamp(2.188rem, 1.887rem + 1.5vw, 3.125rem);
+	border-radius: var(--border-radius);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+	font-size:	clamp(0.813rem, 0.752rem + 0.3vw, 1rem);
+    &.show{
+        opacity: 1;
+        visibility: visible;
+		bottom: 80px;
+    }
+}

@@ -1,0 +1,15 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.9 Section Title
+/*----------------------------------------*/
+
+.section {
+  &-title {
+    font-size: clamp(1.25rem, 0.89rem + 1.8vw, 2.375rem);
+  }
+}
+
+.section-title-wrapper {
+  margin-bottom: 30px;
+}

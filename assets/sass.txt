@@ -1,0 +1,1 @@
+Sass --watch C:\Users\HP\Desktop\LiveShope\assets\scss\main.scss:C:\Users\HP\Desktop\LiveShope\assets\css\style.css

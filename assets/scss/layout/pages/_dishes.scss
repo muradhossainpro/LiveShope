@@ -1,0 +1,57 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.3 Brand
+/*----------------------------------------*/
+.dishes {
+ &-image{
+    position: relative;
+    overflow: hidden;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px dashed var(--theme-clr);
+      border-radius: 50%;
+      animation: rotate-border 10s linear infinite;
+    }
+  }
+
+   @keyframes rotate-border {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+  &-btn {
+    & ul {
+      list-style: none;
+      margin-bottom: 20px;
+      & li {
+        margin-right: clamp(0.625rem, 0.17rem + 2.27vw, 1.875rem);
+
+        & a {
+          background-color: var(--theme-clr);
+          padding: 15px clamp(0.938rem, 0.824rem + 0.57vw, 1.25rem);
+          border-radius: var(--border-radius);
+          display: inline-block;
+          &:hover {
+            background-color: var(--black-clr);
+          }
+        }
+      }
+    }
+  }
+}
+
+.gallery-image img {
+  border-radius: var(--border-radius);
+  aspect-ratio: 4/3;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}

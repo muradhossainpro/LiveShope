@@ -1,0 +1,78 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  6.15 Testimonial
+/*----------------------------------------*/
+
+.testimonial {
+  padding: clamp(0.75rem, 0.39rem + 1.8vw, 1.875rem);
+  background: var(--theme-clr-2);
+  border-radius: var(--border-radius);
+  padding-bottom: 0;
+
+  @media #{$xs} {
+    padding: 15px;
+    padding-bottom: 0;
+  }
+
+  &-image {
+    & img {
+      border-radius: 100%;
+    }
+    &-2{
+      margin-right: clamp(0.625rem, 0.17rem + 2.27vw, 1.875rem);
+    }
+  }
+
+  &-rating {
+    & i {
+      color: var(--theme-clr);
+    }
+  }
+
+  &-quote {
+    background: var(--border-clr);
+    font-size: clamp(0.75rem, 0.49rem + 1.3vw, 1.563rem);
+    display: inline-block;
+    color: var(--white-clr);
+    border-radius: 30px 30px 0 0;
+    padding: 10px 15px;
+  }
+
+  &-swiper {
+    &-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 99;
+      left: 0px;
+      font-size: clamp(0.813rem, 0.767rem + 0.23vw, 0.938rem);
+      background: var(--theme-clr);
+      height: clamp(2.188rem, 1.96rem + 1.14vw, 2.813rem);
+      width: clamp(2.188rem, 1.96rem + 1.14vw, 2.813rem);
+      line-height: clamp(2.188rem, 1.96rem + 1.14vw, 2.813rem);
+      text-align: center;
+      border-radius: 30px;
+      color: var(--white-clr);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+
+      &-next {
+        left: auto;
+        right: 0px;
+      }
+    }
+  }
+
+  &-wrapper {
+    &:hover {
+      & .testimonial-swiper-button {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &-title{
+    font-size: clamp(0.625rem, 0.398rem + 1.14vw, 1.25rem);
+  }
+}

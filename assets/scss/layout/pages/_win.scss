@@ -1,0 +1,33 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.7 Faq
+/*----------------------------------------*/
+
+.win {
+  border: 1px solid var(--border-clr);
+  padding: clamp(0.625rem, 0.425rem + 1vw, 1.25rem);
+  background-color: var(--white-clr);
+  border-radius: var(--border-radius);
+
+  & ul {
+    list-style: none;
+
+    & li {
+      font-weight: 600;
+      margin-bottom: 13px;
+      & i {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &-image {
+    & img {
+      border-radius: var(--border-radius);
+    }
+  }
+}
+.win-title{
+  font-size: clamp(0.938rem, 0.637rem + 1.5vw, 1.875rem);
+}

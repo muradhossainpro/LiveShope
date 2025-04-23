@@ -1,0 +1,31 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.3 Breadcrumb
+/*----------------------------------------*/
+
+.breadcrumbs{
+    &-space {
+        padding-top: 200px;
+        padding-bottom: 140px;
+    }
+    &-list{
+        & span {
+            margin: 0 2px;
+            display: inline-block;
+            color: var(--black-clr);
+            &.active{
+                & a{
+                    color: var(--theme-clr);
+                }
+            }
+            & a {
+                color: var(--black-clr);
+                font-size: 20px;
+            }
+            &.dvir{
+                margin: 0 2px;
+            }
+        }
+    }
+}

@@ -1,0 +1,195 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.4 Contact
+/*----------------------------------------*/
+
+.contact {
+  padding: clamp(1.563rem, 1.063rem + 2.5vw, 3.125rem);
+  text-align: center;
+  border: 1px solid var(--theme-clr);
+  border-radius: var(--border-radius);
+
+  &-content {
+    @media #{$xs,$sm} {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-details {
+    background-color: var(--theme-clr);
+    padding: clamp(1.563rem, 1.063rem + 2.5vw, 3.125rem);
+    border-radius: var(--border-radius);
+  }
+
+  &-title {
+    color: var(--white-clr);
+    margin-bottom: 0;
+  }
+
+  &-text {
+    & p {
+      color: var(--white-clr);
+      margin-bottom: 0;
+    }
+
+    &-icon{
+      display: inline-block;
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      background: var(--theme-clr-2);
+      text-align: center;
+      line-height: 45px;
+      font-size: 20px;
+      transition: .3s;
+    }
+  }
+
+  &-btn {
+    & a {
+      padding: 15px 28px;
+      font-weight: 700;
+      background: var(--white-clr);
+      border-radius: var(--border-radius);
+      color: var(--black-clr);
+      display: inline-block;
+
+      &:hover {
+        color: var(--white-clr);
+        background-color: var(--black-clr);
+      }
+    }
+  }
+
+  &-icon {
+    @media #{$xs,$sm} {
+      margin-bottom: 20px;
+    }
+
+    span {
+      color: var(--black-clr);
+      background-color: var(--theme-clr-2);
+      padding: 9px 15px;
+      border-radius: var(--border-radius);
+      font-size: clamp(0.938rem, 0.877rem + 0.3vw, 1.125rem);
+      text-align: center;
+      display: inline-block;
+    }
+  }
+
+  &-map {
+    height: 100%;
+
+    & iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &:hover{
+    & .contact-text-icon{
+      background-color: var(--theme-clr);
+      color: var(--white-clr);
+    }
+  }
+}
+
+
+.form {
+  &-group {
+    padding-top: 15px;
+
+    & label {
+      margin-bottom: 10px;
+      font-size: clamp(0.938rem, 0.84rem + 0.49vw, 1.25rem);
+      color: var(--theme-clr);
+      display: block;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+
+    & input {
+      border: 1px solid var(--border-clr);
+      padding: 15px;
+      border-radius: 8px;
+      width: 100%;
+
+      @include placeholder {
+        color: var(--black-clr);
+      }
+
+      &:focus {
+        border-color: var(--black-clr);
+        text-transform: capitalize;
+      }
+    }
+
+    & textarea {
+      padding: 15px;
+      height: 120px;
+      border: 1px solid var(--border-clr);
+      border-radius: 8px;
+
+      @include placeholder {
+        color: var(--black-clr);
+      }
+
+      &:focus {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &-submit {
+    & button{
+      background-color: var(--theme-clr);
+      text-align: center;
+      font-size: clamp(0.938rem, 0.824rem + 0.57vw, 1.25rem);
+      color: var(--white-clr);
+      padding: clamp(0.813rem, 0.653rem + 0.8vw, 1.25rem) 0;
+      border-radius: var(--border-radius);
+      width: 100%;
+    }
+  }
+
+  &-box {
+    & input {
+      border: 1px solid var(--border-clr);
+      padding: 15px;
+      border-radius: 8px;
+      width: 100%;
+
+      @include placeholder {
+        color: var(--black-clr);
+      }
+
+      &:focus {
+        border-color: var(--black-clr);
+        text-transform: capitalize;
+      }
+    }
+
+    & textarea {
+      padding: 15px;
+      height: 120px;
+      border: 1px solid var(--border-clr);
+      border-radius: 8px;
+
+      @include placeholder {
+        color: var(--black-clr);
+      }
+
+      &:focus {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &-title {
+    @media #{$xs} {
+      font-size: 20px;
+    }
+  }
+}

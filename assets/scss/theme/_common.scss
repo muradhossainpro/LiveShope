@@ -1,0 +1,164 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  1.2 Common Classes
+/*----------------------------------------*/
+
+.w-img {
+	& img {
+		width: 100%;
+	}
+}
+
+.m-img {
+	& img {
+		max-width: 100%;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.fix {
+	overflow: hidden
+}
+
+.clear {
+	clear: both;
+}
+
+.z-index-1 {
+	z-index: 1;
+}
+
+.z-index-2 {
+	z-index: 2;
+}
+
+.z-index-3 {
+	z-index: 3;
+}
+
+.z-index-11 {
+	z-index: 11;
+}
+
+.bg-pos-end {
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.overflow-y-visible {
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.overflow-x-visible {
+	overflow-x: visible;
+	overflow-y: hidden;
+}
+
+.p-relative {
+	position: relative;
+}
+
+.p-absolute {
+	position: absolute;
+}
+
+.fs {
+	&-80 {
+		font-size: 80px;
+	}
+	&-30{
+		font-size: 30px;
+	}
+	&-15{
+		font-size: 15px;
+	}
+}
+
+.fw{
+	&-500{
+		font-weight: 500;
+	}
+	&-300{
+		font-weight: 300;
+	}
+}
+
+.br {
+	&-5 {
+		border-radius: var(--border-radius);
+
+		& img {
+			border-radius: var(--border-radius);
+		}
+	}
+}
+
+.orange-bg {
+	background-color: rgba(245, 71, 72, 0.9);
+}
+
+//dishes slider
+.slide-transtion {
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+}
+
+.slide-element {
+	width: auto;
+	display: inline-block;
+}
+
+.bg-fix {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.section-padding {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.plr-20 {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.mx-w-600 {
+	max-width: 550px;
+	margin: 0 auto;
+}
+
+.hero-section-padding {
+	padding-top: 120px;
+	padding-bottom: 100px;
+
+	&-2 {
+		padding-top: 220px;
+	}
+}
+
+// overly-hero-start
+.bg-overly {
+	position: relative;
+}
+
+.bg-overly::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--black-clr);
+	opacity: 0.7;
+}

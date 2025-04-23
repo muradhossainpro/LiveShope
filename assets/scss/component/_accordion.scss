@@ -1,0 +1,40 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  2.1 Accordion
+/*----------------------------------------*/
+
+.tf-accordion{
+    &-header{
+        margin: 0;
+    }
+    &-item{
+        border: 1px solid var(--border-clr);
+        border-radius: 10px; 
+    }
+    &-button {
+        font-size: 20px;
+        width: 100%;
+        padding: 23px 30px;
+        text-align: left;
+        @include flexbox();
+        justify-content: space-between;
+        & span{
+            margin-left: 20px;
+            font-size: 16px;
+            transition: .3s;
+        }
+        &.collapsed{
+            & span{
+                @include transform(rotate(-90deg));
+            }
+        }
+    }
+    &-body {
+        margin: 0 30px;
+        border-top: 1px solid var(--black-clr);
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}

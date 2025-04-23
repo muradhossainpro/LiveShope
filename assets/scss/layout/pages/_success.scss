@@ -1,0 +1,56 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.12 Process
+/*----------------------------------------*/
+.success__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(0.625rem, 0.425rem + 1vw, 1.25rem);
+
+  @media #{$xs,$sm,$md} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.success {
+  position: relative;
+  border: 1px solid var(--white-clr);
+  border-radius: var(--border-radius);
+  padding: clamp(0.75rem, 0.39rem + 1.8vw, 1.875rem);
+  transition: .3s;
+  &__icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    & i {
+      color: var(--white-clr);
+      font-size: clamp(1rem, 0.72rem + 1.4vw, 1.875rem);
+    }
+  }
+
+  &__number {
+    font-size: clamp(1rem, 0.62rem + 1.9vw, 2.188rem);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--white-clr);
+    display: inline-block;
+  }
+
+  p {
+    color: var(--white-clr);
+    margin-bottom: 0;
+    font-size: clamp(0.688rem, 0.587rem + 0.5vw, 1rem);
+  }
+
+  &__content {
+    & span {
+      color: var(--white-clr);
+      font-size: clamp(1rem, 0.72rem + 1.4vw, 1.875rem);
+    }
+  }
+  &:hover{
+    background: rgb(255, 230, 230, .2);
+  }
+}

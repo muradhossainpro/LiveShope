@@ -1,0 +1,228 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.5 popular
+/*----------------------------------------*/
+
+.popular {
+  border: 1px solid var(--border-clr);
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+
+
+  &-image {
+    position: relative;
+    overflow: hidden;
+    & img {
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      transition: .3s;
+
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background-image: linear-gradient(180deg, transparent 0 30%, rgba(0, 0, 0, .8) 70% 100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+    }
+    &:hover {
+      & .popular-text {
+        opacity: 1;
+        visibility: visible;
+        bottom: 10px;
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &-content {
+    padding: clamp(0.563rem, 0.443rem + 0.6vw, 0.938rem);
+
+    &>span {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+
+      & i {
+        color: var(--theme-clr);
+      }
+    }
+  }
+
+  &-title {
+    margin-bottom: 0;
+  }
+
+  &-meta {
+    display: flex;
+    justify-content: space-between;
+
+    & span {
+      & i {
+        color: var(--theme-clr);
+      }
+    }
+  }
+
+  &-text {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 9;
+
+    & span {
+      color: var(--white-clr);
+      font-weight: 700;
+    }
+
+    & h4 {
+      color: var(--white-clr);
+      margin-bottom: 0;
+    }
+  }
+
+  &-swiper {
+    &-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 99;
+      left: 0px;
+      font-size: clamp(0.813rem, 0.767rem + 0.23vw, 0.938rem);
+      background: var(--theme-clr);
+      width: clamp(2.188rem, 1.96rem + 1.14vw, 2.813rem);
+      height: clamp(2.188rem, 1.96rem + 1.14vw, 2.813rem);
+      line-height: clamp(2.188rem, 1.96rem + 1.14vw, 2.813rem);
+      text-align: center;
+      border-radius: 30px;
+      color: var(--white-clr);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+
+      &-next {
+        left: auto;
+        right: 0px;
+      }
+    }
+  }
+
+  &-wrapper {
+    &:hover {
+      & .popular-swiper-button {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+   &:hover {
+    & .popular-image {
+        img {
+          transform: scale(1.1);
+        }
+    }
+  }
+}
+
+.delicious {
+  &-title {
+    color: var(--white-clr);
+    font-size: 50px;
+
+    @media #{$xs} {
+      font-size: 25px;
+    }
+  }
+
+  &-padding {
+    padding-top: 120px;
+  }
+
+  &-content {
+    z-index: 9;
+    position: relative;
+  }
+}
+
+.discount {
+  &-title {
+    color: var(--white-clr);
+    font-size: clamp(1.875rem, 0.966rem + 4.55vw, 4.375rem);
+     background: linear-gradient(90deg, var(--theme-clr) 50%, transparent 50%), 
+                linear-gradient(90deg, var(--theme-clr) 50%, transparent 50%), 
+                linear-gradient(0deg, var(--theme-clr) 50%, transparent 50%), 
+                linear-gradient(0deg, var(--theme-clr) 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
+    background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    animation: dash 8s linear infinite;
+  }
+
+  @keyframes dash {
+    to {
+        background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+    }
+}
+
+  &-content {
+    z-index: 9;
+    position: relative;
+    & span {
+      color: var(--white-clr);
+      font-size: 30px;
+      margin-bottom: 20px;
+      display: inline-block;
+      font-weight: 500;
+
+      @media #{$xs} {
+        font-size: 20px;
+      }
+    }
+
+    & p {
+      color: var(--white-clr);
+      font-size: 20px;
+      font-weight: 500;
+
+      @media #{$xs} {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+.solid-map {
+  & iframe {
+    width: 100%;
+    height: 600px;
+
+    @media #{$lg} {
+      height: 500px;
+    }
+
+    @media #{$md} {
+      height: 400px;
+    }
+
+    @media #{$xs} {
+      height: 300px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.10 Portfolio
+/*----------------------------------------*/
+
+.download {
+  background-color: var(--theme-clr);
+  padding: clamp(1.563rem, 1.262rem + 1.5vw, 2.5rem);
+  border-radius: var(--border-radius);
+
+  @media #{$xs,$sm,$md} {
+    text-align: center;
+  }
+
+  &-title {
+    color: var(--white-clr);
+    font-size: clamp(1.25rem, 0.89rem + 1.8vw, 2.375rem);
+    text-transform: capitalize;
+  }
+
+  & p {
+    color: var(--white-clr);
+  }
+
+  &-btn {
+    & ul {
+      list-style: none;
+
+      & li {
+        margin-right: 30px;
+
+        @media #{$xs} {
+          margin-right: 0;
+        }
+
+        & a {
+          background-color: var(--white-clr);
+          padding: 15px 20px;
+          border-radius: var(--border-radius);
+          display: inline-block;
+
+          &:hover {
+            background-color: var(--theme-clr-2);
+          }
+        }
+      }
+    }
+  }
+}
